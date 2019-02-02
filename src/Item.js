@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 class Item extends Component {
     render() {
@@ -6,6 +7,10 @@ class Item extends Component {
             <li>{this.props.item}</li>
         )
     }
+}
+
+Item.propTypes = {
+    item: PropTypes.string
 }
 
 export default Item

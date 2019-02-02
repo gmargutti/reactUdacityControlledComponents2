@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import PropTypes from 'prop-types'
 class DeleteItem extends Component {
     render() {
         return(
@@ -8,6 +8,11 @@ class DeleteItem extends Component {
             </div>
         )
     }
+}
+
+DeleteItem.propTypes = {
+    deleteLastItem: PropTypes.func,
+    deleteDisabled: PropTypes.bool
 }
 
 export default DeleteItem

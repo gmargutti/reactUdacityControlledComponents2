@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AddItem from './AddItem';
 import DeleteItem from './DeleteItem'
+import PropTypes from 'prop-types'
 
 class ManageItems extends Component {
     state = {
@@ -14,6 +15,12 @@ class ManageItems extends Component {
             </div>
         )
     }
+}
+
+ManageItems.propTypes = {
+    addItem : PropTypes.func,
+    deleteLastItem : PropTypes.func,
+    deleteDisabled : PropTypes.bool
 }
 
 export default ManageItems;
